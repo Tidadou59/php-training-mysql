@@ -1,3 +1,36 @@
+<?php
+include ("connexion.php"); //connexion bdd
+/* ***************************************************************** */
+
+/**** Ajouter une randonnée ****/
+    if (!empty($_POST))
+        {
+            ajouter();
+        }
+
+function ajouter ()
+{
+    global $conn;
+
+    $stmt = $conn->prepare("INSERT INTO hiking (name, difficulty, distance, duration, height_difference) VALUES (?, ?, ?, ?, ?)");
+
+    $name = $_POST['name'];
+    $difficulty = $_POST['difficulty'];
+    $distance = $_POST['distance'];
+    $duration = $_POST['duration'];
+    $height_difference = $_POST['height_difference'];
+
+    $stmt->bind_param("ssiii", $name, $difficulty, $distance, $duration, $height_difference);
+
+    $stmt->execute();
+
+    // afficher un message
+    echo "données envoyé... <br><br>";
+    header('Location: read.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +39,7 @@
 	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<a href="/php-pdo/read.php">Liste des données</a>
+	<a href="read.php">Liste des données</a>
 	<h1>Ajouter</h1>
 	<form action="" method="post">
 		<div>
@@ -17,14 +50,14 @@
 		<div>
 			<label for="difficulty">Difficulté</label>
 			<select name="difficulty">
-				<option value="très facile">Très facile</option>
+				<option value="Tfacile">Très facile</option>
 				<option value="facile">Facile</option>
 				<option value="moyen">Moyen</option>
 				<option value="difficile">Difficile</option>
-				<option value="très difficile">Très difficile</option>
+				<option value="Tdifficile">Très difficile</option>
 			</select>
 		</div>
-		
+
 		<div>
 			<label for="distance">Distance</label>
 			<input type="text" name="distance" value="">

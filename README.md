@@ -7,16 +7,13 @@ Cette [ressource](https://openclassrooms.com/courses/concevez-votre-site-web-ave
 Après avoir fait la partie "Écrire les données", vous pourrez commencer l'activité.
 
 # Objectif
-
 Nous allons faire une web app qui va lister les randonnées à l'île de la Réunion.
 
 # Création de la base de données
 Je vous ai créé la base de données. vous pouvez la récupérer *database/reunion_island.sql* pour l'importer. Comme vous l'avez déjà vu, c'est plus facile de le faire avec Phpmyadmmin.
-
 Cette base de données contient, pour l'instant, que la table *hiking* (randonnée)
 
 # Remplir la base de données
-
 Pour commencer à travailler, c'est plus simple d'avoir déjà des données.
 
 C'est pourquoi vous allez remplir la table *hiking* à partir des données que
@@ -30,10 +27,13 @@ Il faut insérer 5 randonnées. Chaque randonnée devra renseigner les champs :
 * height_difference (dénivelé)
 
 # Afficher la liste des randonnées
-
 Dans le fichier *read.php*, récupérez les randonnées directement de la base données et affichez-les dans un tableau.
 
+
+
 Vous devez utiliser PHP bien sûr, mais aussi PDO.
+
+
 
 > Rappel : un fichier PHP ne s'ouvre dans le navigateur en faisant un glisser déposer ! Ça ne va pas fonctionner !
 Vous devez absolument passer par votre serveur apache local : http://localhost/ ou http://localhost:8000/ ou etc.
@@ -109,3 +109,9 @@ Si vous avez utiliser la méthode ```query()``` ou ```exec()``` avec des variabl
 Si vous avez mis, dans chaque fichier, la connexion à la base de données sachez qu'il y'a un moyen de factoriser tout ça en utilisant ```include()```. Maintenant que vous le savez, il vous reste plus qu'à le mettre en place :)
 
 C'est une possibilité de refactorisation, il y en a d'autres...
+
+
+
+
+<th class="taille_Age"> <img src="ico-modifier.jpg" height="100" width="100" >  </th>
+            <th class="taille_Age"> <img src="ico-suppr.jpg" height="100" width="100" >  </th>
