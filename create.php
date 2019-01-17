@@ -1,5 +1,8 @@
 <?php
 include ("connexion.php"); //connexion bdd
+// démarre la session
+//session_start (); (déjà rajouté dans le fichier "connexion.php")
+include ("protection.php"); //vérification de connexion
 /* ***************************************************************** */
 
 /**** Ajouter une randonnée ****/

@@ -5,6 +5,9 @@
  * Time: 15:32
  */
 
+session_start();
+/* ---------------------------------------------------- */
+
 // info server
 $servername = "localhost";
 $username = "root";
@@ -26,3 +29,4 @@ else
 
 //echo "Connexion Ok :) <br><br>"; //vérifie que les infos son ok
 /* ***************************************************************** */
+

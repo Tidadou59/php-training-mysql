@@ -177,3 +177,10 @@ td.souriss:hover
 {
   border-radius: 50px;
 }
+
+.pwd
+{
+  text-align: center;
+  font-size: 24px;
+  font-family: Verdana;
+}
